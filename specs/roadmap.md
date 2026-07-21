@@ -9,12 +9,10 @@ This roadmap is split into very small phases to support iterative delivery.
 - build a basic dashboard UI for agents and staff
 - **Phase 1 complete**
 
-## Phase 2 - Agent and appointment workflows
+## Phase 2 - Agent workflows, polish, and launch readiness
 - implement agent record management
 - implement ailment and therapy management
 - add appointment booking and status updates
-
-## Phase 3 - polish and marketing readiness
 - refine UI for attractiveness and usability
 - ensure responsive design across desktop, tablet, and mobile screens
 - improve browser compatibility for modern browsers
