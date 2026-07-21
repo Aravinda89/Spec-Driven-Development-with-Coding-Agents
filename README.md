@@ -16,11 +16,15 @@
    ```bash
    npm run dev
    ```
-3. Open the home page in your browser:
+3. Run the test suite:
+   ```bash
+   npm test
+   ```
+4. Open the home page in your browser:
    ```bash
    http://localhost:3000/
    ```
-4. Verify setup with the built-in verification script:
+5. Verify setup with the built-in verification script:
    ```bash
    npm run verify
    ```

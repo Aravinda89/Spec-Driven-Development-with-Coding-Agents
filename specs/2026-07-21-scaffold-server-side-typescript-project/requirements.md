@@ -10,6 +10,7 @@
 - Use server-side TypeScript to match stakeholder demand for a popular TypeScript stack.
 - Choose Express for a widely familiar framework and easy onboarding.
 - Use SQLite as the persistence engine for a lightweight, local-first experience.
+- Adopt Vitest for validation to support fast, local test execution.
 - Keep the first phase focused on setup and verification rather than business features.
 
 ## Context

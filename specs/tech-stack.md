@@ -7,3 +7,4 @@ AgentClinic is built on a server-side TypeScript stack with a focus on reliabili
 - Database: SQLite
 - Language: TypeScript
 - Browser support: modern browsers with responsive design
+- Validation: Vitest for test-driven validation and component-level checks
