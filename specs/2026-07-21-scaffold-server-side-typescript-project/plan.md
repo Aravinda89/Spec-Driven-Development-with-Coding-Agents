@@ -24,9 +24,10 @@
    1. add a `public/` static directory to serve frontend assets
    2. create a minimal `index.html` landing page
    3. implement a main layout component that mounts three subcomponents: `Header`, `Main`, `Footer`
-   4. add `public/js/` modules for the subcomponents and a `layout.js` entry
-   5. add `public/css/styles.css` and link it from the page
-   6. verify the home page renders the layout and assets are served correctly
+   4. place `Header`, `Main`, and `Footer` in their own source files under `public/js/`
+   5. add `public/js/layout.js` as the entrypoint that imports the subcomponents
+   6. add `public/css/styles.css` and link it from the page
+   7. verify the home page renders the layout and assets are served correctly
 
 4. Initial documentation and validation
    1. add SQLite database setup and migrations or schema initialization

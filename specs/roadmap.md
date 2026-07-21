@@ -7,6 +7,7 @@ This roadmap is split into very small phases to support iterative delivery.
 - add Express-based API and SQLite persistence
 - design core data models: agents, ailments, therapies, appointments
 - build a basic dashboard UI for agents and staff
+- **Phase 1 complete**
 
 ## Phase 2 - Agent and appointment workflows
 - implement agent record management
