@@ -1,12 +1,12 @@
 import express from 'express';
+import path from 'path';
 import { openDatabase } from './db';
 
 const app = express();
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
-app.get('/', (_req, res) => {
-  res.send(`AgentClinic is running. Welcome to the clinic for AI agents.`);
-});
+// Serve static files from public/
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/health', (_req, res) => {
   res.json({ status: 'ok', uptime: process.uptime() });
