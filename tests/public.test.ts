@@ -12,4 +12,15 @@ describe('AgentClinic public assets', () => {
     const html = fs.readFileSync(path.resolve(process.cwd(), 'public', 'index.html'), 'utf-8');
     expect(html).toContain('<link rel="stylesheet" href="/css/styles.css" />');
   });
+
+  it('includes a responsive viewport meta tag', () => {
+    const html = fs.readFileSync(path.resolve(process.cwd(), 'public', 'index.html'), 'utf-8');
+    expect(html).toContain('<meta name="viewport" content="width=device-width,initial-scale=1" />');
+  });
+
+  it('includes responsive CSS media query rules', () => {
+    const css = fs.readFileSync(path.resolve(process.cwd(), 'public', 'css', 'styles.css'), 'utf-8');
+    expect(css).toContain('@media (max-width: 768px)');
+    expect(css).toContain('@media (max-width: 480px)');
+  });
 });

@@ -4,6 +4,7 @@
 - Establish the backend foundation for AgentClinic using Node.js, TypeScript, Express, and SQLite.
 - Create the initial repository layout and developer tooling.
 - Add a minimal AgentClinic home page route to verify the web surface.
+- Ensure the home page uses a responsive design that works on mobile and desktop.
 - Ensure the app can start locally and connect to a SQLite database.
 
 ## Decisions

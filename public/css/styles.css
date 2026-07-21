@@ -1,8 +1,28 @@
 * { box-sizing: border-box; }
-body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; color: #222; }
-.site-header { background: #0b5; padding: 20px; color: #042; }
-.site-header h1 { margin: 0; font-size: 1.5rem; }
-.site-header p { margin: 4px 0 0; font-size: 0.9rem; }
-.site-main { padding: 24px; min-height: 300px; background: #f7f7f7; }
-.site-footer { background: #eee; padding: 12px 24px; text-align: center; font-size: 0.9rem; }
+html, body { margin: 0; padding: 0; min-height: 100%; }
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; color: #222; background: #fafafa; }
+.container { width: min(100%, 1080px); margin: 0 auto; padding: 0 16px; }
+.site-header { background: #0b5; padding: 24px 0; color: #042; }
+.site-header h1 { margin: 0; font-size: 2rem; }
+.site-header p { margin: 8px 0 0; font-size: 1rem; }
+.site-main { padding: 32px 0; min-height: 300px; background: #f7f7f7; }
+.site-main h2 { font-size: 1.75rem; margin-top: 0; }
+.site-main p { line-height: 1.6; max-width: 760px; }
+.site-footer { background: #eee; padding: 16px 0; text-align: center; font-size: 0.95rem; }
 #app { display: flex; flex-direction: column; min-height: 100vh; }
+
+@media (max-width: 768px) {
+  .container { padding: 0 12px; }
+  .site-header { padding: 20px 0; }
+  .site-header h1 { font-size: 1.5rem; }
+  .site-header p { font-size: 0.95rem; }
+  .site-main { padding: 24px 0; }
+  .site-main h2 { font-size: 1.35rem; }
+}
+
+@media (max-width: 480px) {
+  .site-header { padding: 18px 0; }
+  .site-footer { padding: 14px 0; }
+  .site-main { padding: 20px 0; }
+  .site-main p { font-size: 0.98rem; }
+}
