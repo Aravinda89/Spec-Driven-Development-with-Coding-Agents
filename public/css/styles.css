@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; color: #222; }
+.site-header { background: #0b5; padding: 20px; color: #042; }
+.site-header h1 { margin: 0; font-size: 1.5rem; }
+.site-header p { margin: 4px 0 0; font-size: 0.9rem; }
+.site-main { padding: 24px; min-height: 300px; background: #f7f7f7; }
+.site-footer { background: #eee; padding: 12px 24px; text-align: center; font-size: 0.9rem; }
+#app { display: flex; flex-direction: column; min-height: 100vh; }
