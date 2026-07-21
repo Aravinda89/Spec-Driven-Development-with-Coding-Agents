@@ -10,7 +10,12 @@
    2. add TypeScript compile and run scripts
    3. configure environment-based settings for development
 
-3. Persistence and data access
+3. Minimal home page
+   1. add a simple AgentClinic home page route
+   2. render a minimal page or JSON response with site name and status
+   3. confirm the home page loads in a browser or HTTP client
+
+4. Persistence and data access
    1. add SQLite database setup and migrations or schema initialization
    2. create a simple data access layer or repository pattern
    3. verify database connectivity from the app
