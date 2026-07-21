@@ -34,6 +34,7 @@
 - `src/` - backend source code for the Express server and SQLite persistence
 - `data/` - runtime SQLite database file location
 - `specs/` - mission, tech stack, roadmap, and feature specs
+- `scripts/` - helper scripts for repository maintenance
 
 ## Notes
 
