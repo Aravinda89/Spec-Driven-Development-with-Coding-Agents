@@ -17,14 +17,21 @@ export function createApp(): Express {
 
   app.use(express.json());
 
+  app.get('/health', (_req, res) => {
+    res.json({ status: 'ok', uptime: process.uptime() });
+  });
+
   app.get('/api/agents', async (_req, res) => {
     try {
       const db = await openDatabase();
-      const rows = await db.all<AgentRecord>(
-        'SELECT id, name, status FROM agents ORDER BY id ASC'
-      );
-      await db.close();
-      res.json(rows);
+      try {
+        const rows = await db.all<AgentRecord>(
+          'SELECT id, name, status FROM agents ORDER BY id ASC'
+        );
+        res.json(rows);
+      } finally {
+        await db.close();
+      }
     } catch (error) {
       res.status(500).json({ error: 'Failed to list agents' });
     }
@@ -40,18 +47,21 @@ export function createApp(): Express {
 
     try {
       const db = await openDatabase();
-      const result = await db.run(
-        'INSERT INTO agents (name, status) VALUES (?, ?)',
-        [name.trim(), typeof status === 'string' ? status : 'healthy']
-      );
+      try {
+        const result = await db.run(
+          'INSERT INTO agents (name, status) VALUES (?, ?)',
+          [name.trim(), typeof status === 'string' ? status : 'healthy']
+        );
 
-      const inserted = await db.get<AgentRecord>(
-        'SELECT id, name, status FROM agents WHERE id = ?',
-        [result.lastID]
-      );
-      await db.close();
+        const inserted = await db.get<AgentRecord>(
+          'SELECT id, name, status FROM agents WHERE id = ?',
+          [result.lastID]
+        );
 
-      res.status(201).json(inserted);
+        res.status(201).json(inserted);
+      } finally {
+        await db.close();
+      }
     } catch (error) {
       res.status(500).json({ error: 'Failed to create agent' });
     }
