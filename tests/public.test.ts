@@ -23,4 +23,10 @@ describe('AgentClinic public assets', () => {
     expect(css).toContain('@media (max-width: 768px)');
     expect(css).toContain('@media (max-width: 480px)');
   });
+
+  it('contains the MVP dashboard shell copy for agent records', () => {
+    const mainScript = fs.readFileSync(path.resolve(process.cwd(), 'public', 'js', 'main.js'), 'utf-8');
+    expect(mainScript).toContain('Agent Records');
+    expect(mainScript).toContain('Create Agent');
+  });
 });
