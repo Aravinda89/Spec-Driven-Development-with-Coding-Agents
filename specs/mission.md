@@ -6,7 +6,7 @@ Our mission emphasizes:
 - agent care and human-agent collaboration
 - a dependable, modern TypeScript-first foundation
 - an approachable learning/demo experience for students and conference developers
-- a responsive web UI using Pico CSS that works well across desktop and mobile screens
+- a responsive web UI using Pico CSS with an orange-and-black brand palette that works well across desktop and mobile screens
 
 ## Target audience
 - Course students learning spec-driven development with AI coding agents
