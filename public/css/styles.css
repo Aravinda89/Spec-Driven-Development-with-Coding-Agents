@@ -1,14 +1,14 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; min-height: 100%; }
-body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; color: #222; background: #fafafa; }
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; color: #111111; background: #fffaf5; }
 .container { width: min(100%, 1080px); margin: 0 auto; padding: 0 16px; }
-.site-header { background: #0b5; padding: 24px 0; color: #042; }
+.site-header { background: #ff7a1a; padding: 24px 0; color: #111111; }
 .site-header h1 { margin: 0; font-size: 2rem; }
 .site-header p { margin: 8px 0 0; font-size: 1rem; }
-.site-main { padding: 32px 0; min-height: 300px; background: #f7f7f7; }
-.site-main h2 { font-size: 1.75rem; margin-top: 0; }
-.site-main p { line-height: 1.6; max-width: 760px; }
-.site-footer { background: #eee; padding: 16px 0; text-align: center; font-size: 0.95rem; }
+.site-main { padding: 32px 0; min-height: 300px; background: #ffffff; }
+.site-main h2 { font-size: 1.75rem; margin-top: 0; color: #111111; }
+.site-main p { line-height: 1.6; max-width: 760px; color: #222222; }
+.site-footer { background: #111111; padding: 16px 0; text-align: center; font-size: 0.95rem; color: #ff7a1a; }
 #app { display: flex; flex-direction: column; min-height: 100vh; }
 
 @media (max-width: 768px) {
