@@ -1,6 +1,17 @@
 import express, { Express } from 'express';
 import { openDatabase } from './db';
 
+type AgentRecord = {
+  id: number;
+  name: string;
+  status: string;
+};
+
+type CreateAgentPayload = {
+  name?: string;
+  status?: string;
+};
+
 export function createApp(): Express {
   const app = express();
 
@@ -9,7 +20,7 @@ export function createApp(): Express {
   app.get('/api/agents', async (_req, res) => {
     try {
       const db = await openDatabase();
-      const rows = await db.all<{ id: number; name: string; status: string }>(
+      const rows = await db.all<AgentRecord>(
         'SELECT id, name, status FROM agents ORDER BY id ASC'
       );
       await db.close();
@@ -20,7 +31,7 @@ export function createApp(): Express {
   });
 
   app.post('/api/agents', async (req, res) => {
-    const { name, status } = req.body ?? {};
+    const { name, status } = req.body as CreateAgentPayload;
 
     if (typeof name !== 'string' || !name.trim()) {
       res.status(400).json({ error: 'name is required' });
@@ -34,7 +45,7 @@ export function createApp(): Express {
         [name.trim(), typeof status === 'string' ? status : 'healthy']
       );
 
-      const inserted = await db.get<{ id: number; name: string; status: string }>(
+      const inserted = await db.get<AgentRecord>(
         'SELECT id, name, status FROM agents WHERE id = ?',
         [result.lastID]
       );
