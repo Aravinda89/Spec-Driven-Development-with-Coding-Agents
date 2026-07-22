@@ -1,8 +1,9 @@
 import express from 'express';
 import path from 'path';
+import { createApp } from './app';
 import { openDatabase } from './db';
 
-const app = express();
+const app = createApp();
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 // Serve static files from public/
