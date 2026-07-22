@@ -13,7 +13,7 @@ This roadmap is split into very small phases to support iterative delivery.
 - implement agent record management
 - implement ailment and therapy management
 - add appointment booking and status updates
-- refine UI for attractiveness and usability with Pico CSS
+- refine UI for attractiveness and usability with Pico CSS and the orange-and-black brand palette
 - ensure responsive design across desktop, tablet, and mobile screens
 - improve browser compatibility for modern browsers
 - add onboarding text and demo-friendly examples
