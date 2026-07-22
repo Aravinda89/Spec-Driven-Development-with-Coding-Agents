@@ -9,10 +9,6 @@ const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 // Serve static files from public/
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.get('/health', (_req, res) => {
-  res.json({ status: 'ok', uptime: process.uptime() });
-});
-
 async function start() {
   try {
     const db = await openDatabase();
