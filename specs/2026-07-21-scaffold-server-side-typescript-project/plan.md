@@ -26,7 +26,7 @@
    3. implement a main layout component that mounts three subcomponents: `Header`, `Main`, `Footer`
    4. place `Header`, `Main`, and `Footer` in their own source files under `public/js/`
    5. add `public/js/layout.js` as the entrypoint that imports the subcomponents
-   6. add `public/css/styles.css` and link it from the page
+   6. use Pico CSS via a CDN or local asset and link it from the page
    7. ensure the layout and styles are responsive on mobile and desktop
    8. verify the home page renders the layout and assets are served correctly
 

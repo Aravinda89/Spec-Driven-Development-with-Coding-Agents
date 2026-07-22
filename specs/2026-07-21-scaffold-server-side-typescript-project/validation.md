@@ -4,7 +4,7 @@
 - The project starts successfully with a TypeScript-powered Express server.
 - The server can open a SQLite database connection without errors.
 - A minimal AgentClinic home page route responds successfully.
-- The home page renders with responsive styles on mobile and desktop.
+- The home page renders with Pico CSS-based responsive styles on mobile and desktop.
 - Vitest tests run successfully and validate the setup.
 
 ## Merge readiness
